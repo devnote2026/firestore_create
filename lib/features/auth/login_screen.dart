@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'auth_service.dart';
+import 'user_service.dart';
+
+import 'package:go_router/go_router.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -16,6 +19,17 @@ class LoginScreen extends StatelessWidget {
             final credential = await authService.signInWithGoogle();
             final uid = credential.user!.uid;
             debugPrint('ユーザーID: $uid');
+
+            final userService = UserService();
+            final exists = await userService.userExists(uid);
+            debugPrint('ユーザーは存在するか: $exists');
+
+            if (!context.mounted) return;
+            if(exists){
+              context.go('/home');
+            } else {
+              context.go('/register');
+            }
           },
           child: const Text('Googleでサインインする'),
         ),
