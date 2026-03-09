@@ -13,7 +13,9 @@ class LoginScreen extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () async {
-            await authService.signInWithGoogle();
+            final credential = await authService.signInWithGoogle();
+            final uid = credential.user!.uid;
+            debugPrint('ユーザーID: $uid');
           },
           child: const Text('Googleでサインインする'),
         ),
