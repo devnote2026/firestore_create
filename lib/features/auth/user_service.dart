@@ -14,4 +14,16 @@ class UserService {
     return doc.exists;
   }
 
+  Future<void> createUser({
+  required String uid,
+  required String nickname,
+}) async {
+
+  await _db.collection("users").doc(uid).set({
+    "nickname": nickname,
+    "createdAt": FieldValue.serverTimestamp(),
+  });
+
+}
+
 }
