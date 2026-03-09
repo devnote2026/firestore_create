@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "112405569197",
+    "project_id": "cloud-firestore-create",
+    "storage_bucket": "cloud-firestore-create.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112405569197:android:5710d2d8b86f873fb5b024",
+        "android_client_info": {
+          "package_name": "com.example.cloud_firestore_create"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112405569197-csdn7sukh91js3lksphct1vi1tet60u9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUbaEpSCqXCXA2r0WaPkruyhvM6wr2Z4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "112405569197-csdn7sukh91js3lksphct1vi1tet60u9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
