@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'features/auth/login_screen.dart';
 import 'features/home/home_screen.dart';
+import 'features/auth/register_screen.dart';
 
 class AppRouter {
   static final _authNotifier =
@@ -34,6 +35,10 @@ class AppRouter {
       GoRoute(
         path: '/home',
         builder: (context, state) => const HomeScreen(),
+      ),
+      GoRoute(
+        path: "/register",
+        builder: (context, state) => const RegisterScreen(),
       ),
     ],
   );
